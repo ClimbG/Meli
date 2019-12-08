@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58E968CBAD86AB5C03518450 /* Pods_Meli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD64225491321575A68A4B9 /* Pods_Meli.framework */; };
 		7B1C37C8238ACA9400B8F69B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C37C7238ACA9400B8F69B /* AppDelegate.swift */; };
 		7B1C37CA238ACA9400B8F69B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C37C9238ACA9400B8F69B /* SceneDelegate.swift */; };
 		7B1C37CC238ACA9400B8F69B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C37CB238ACA9400B8F69B /* ViewController.swift */; };
@@ -14,9 +15,14 @@
 		7B1C37D1238ACA9600B8F69B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B1C37D0238ACA9600B8F69B /* Assets.xcassets */; };
 		7B1C37D4238ACA9600B8F69B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1C37D2238ACA9600B8F69B /* LaunchScreen.storyboard */; };
 		7B2037AB238C4A97009FAFE7 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2037AA238C4A97009FAFE7 /* ViewController2.swift */; };
+		FB1772CB239CB217004A3E0C /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1772CA239CB217004A3E0C /* CellView.xib */; };
+		FB1772CF239CB266004A3E0C /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1772CE239CB266004A3E0C /* CellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E186D2E7A0AAC95D25E63B5 /* Pods-Meli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meli.release.xcconfig"; path = "Target Support Files/Pods-Meli/Pods-Meli.release.xcconfig"; sourceTree = "<group>"; };
+		233F13382C9C22DC305AEFFF /* Pods-Meli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meli.debug.xcconfig"; path = "Target Support Files/Pods-Meli/Pods-Meli.debug.xcconfig"; sourceTree = "<group>"; };
+		3FD64225491321575A68A4B9 /* Pods_Meli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B1C37C4238ACA9400B8F69B /* Meli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B1C37C7238ACA9400B8F69B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B1C37C9238ACA9400B8F69B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		7B1C37D3238ACA9600B8F69B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B1C37D5238ACA9600B8F69B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B2037AA238C4A97009FAFE7 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		FB1772CA239CB217004A3E0C /* CellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		FB1772CE239CB266004A3E0C /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E968CBAD86AB5C03518450 /* Pods_Meli.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06784758D817C694312D4425 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				233F13382C9C22DC305AEFFF /* Pods-Meli.debug.xcconfig */,
+				1E186D2E7A0AAC95D25E63B5 /* Pods-Meli.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7B1C37BB238ACA9400B8F69B = {
 			isa = PBXGroup;
 			children = (
 				7B1C37C6238ACA9400B8F69B /* Meli */,
 				7B1C37C5238ACA9400B8F69B /* Products */,
+				06784758D817C694312D4425 /* Pods */,
+				E51C7C1BF344412B5A5E290A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +87,18 @@
 				7B1C37D0238ACA9600B8F69B /* Assets.xcassets */,
 				7B1C37D2238ACA9600B8F69B /* LaunchScreen.storyboard */,
 				7B1C37D5238ACA9600B8F69B /* Info.plist */,
+				FB1772CA239CB217004A3E0C /* CellView.xib */,
+				FB1772CE239CB266004A3E0C /* CellView.swift */,
 			);
 			path = Meli;
+			sourceTree = "<group>";
+		};
+		E51C7C1BF344412B5A5E290A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FD64225491321575A68A4B9 /* Pods_Meli.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B1C37D8238ACA9600B8F69B /* Build configuration list for PBXNativeTarget "Meli" */;
 			buildPhases = (
+				891E143A3A3F0D10C13DC378 /* [CP] Check Pods Manifest.lock */,
 				7B1C37C0238ACA9400B8F69B /* Sources */,
 				7B1C37C1238ACA9400B8F69B /* Frameworks */,
 				7B1C37C2238ACA9400B8F69B /* Resources */,
+				BBDCC5535E733B84EC33FF85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1772CB239CB217004A3E0C /* CellView.xib in Resources */,
 				7B1C37D4238ACA9600B8F69B /* LaunchScreen.storyboard in Resources */,
 				7B1C37D1238ACA9600B8F69B /* Assets.xcassets in Resources */,
 				7B1C37CF238ACA9400B8F69B /* Main.storyboard in Resources */,
@@ -136,12 +170,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		891E143A3A3F0D10C13DC378 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meli-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBDCC5535E733B84EC33FF85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meli/Pods-Meli-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meli/Pods-Meli-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meli/Pods-Meli-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B1C37C0238ACA9400B8F69B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7B1C37CC238ACA9400B8F69B /* ViewController.swift in Sources */,
+				FB1772CF239CB266004A3E0C /* CellView.swift in Sources */,
 				7B2037AB238C4A97009FAFE7 /* ViewController2.swift in Sources */,
 				7B1C37C8238ACA9400B8F69B /* AppDelegate.swift in Sources */,
 				7B1C37CA238ACA9400B8F69B /* SceneDelegate.swift in Sources */,
@@ -286,6 +363,7 @@
 		};
 		7B1C37D9238ACA9600B8F69B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 233F13382C9C22DC305AEFFF /* Pods-Meli.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +383,7 @@
 		};
 		7B1C37DA238ACA9600B8F69B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E186D2E7A0AAC95D25E63B5 /* Pods-Meli.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
