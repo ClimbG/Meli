@@ -38,7 +38,7 @@ class ViewController3: UIViewController,  UITableViewDelegate, UITableViewDataSo
     }
     
     func getBanks() {
-        let str:String = "https://api.mercadopago.com/v1/payment_methods/card_issuers?public_key=444a9ef5-8a6b-429f-abdf-587639155d88&payment_method_id=visa"
+        let str:String = "https://api.mercadopago.com/v1/payment_methods/card_issuers?public_key=444a9ef5-8a6b-429f-abdf-587639155d88&payment_method_id=\(idName)" //aqui es donde estoy estancado
         
         let objUrl:URL? = URL(string: str)
         
