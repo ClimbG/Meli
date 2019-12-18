@@ -2,7 +2,7 @@
 //  ViewController2.swift
 //  Meli
 //
-//  Created by Gilmer Marcano on 11/25/19.
+//  Created by Gilmer Marcano on 11/25/19
 //  Copyright © 2019 Gilmer Marcano. All rights reserved.
 //
 
@@ -15,6 +15,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var nameArray1:[String] = [String]()
     var imageArray1:[String] = [String]()
+    var idArray1:[String] = [String]()
     
     @IBOutlet weak var moneyIn: UILabel!
     
@@ -23,10 +24,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     var valorRecibido: String?
     
     override func viewDidLoad() {
-        print("viewDidLoad")
+      
         super.viewDidLoad()
+
         moneyIn.text = valorRecibido
-        
         tableView.dataSource = self
         tableView.delegate = self
              
@@ -34,6 +35,7 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         let nibCell = UINib.init(nibName: cellViewStr, bundle: nil)
         
         tableView.register(nibCell, forCellReuseIdentifier: "identifierCell")
+        
         self.getCards()
     }
 
@@ -44,16 +46,13 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         let objUrl: URL? = URL(string:str)
 
         let tarea:URLSessionDataTask = URLSession.shared.dataTask(with: objUrl!){ (datos: Data?, respuesta: URLResponse?, error: Error?) in
-            print("dataTask")
+     
             // Evaluamos si existe algun error en la peticion que hicimos
             if error != nil{
                 print(error!)
             } else {
                 do {
                     let json = try JSONSerialization.jsonObject(with: datos!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String:Any]]
-                    
-                    //var nameArray = [String]()
-                    //var imageArray = [String]()
 
                     for object in json {
                         if let name = object["name"] as? String {
@@ -61,6 +60,9 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
                         }
                         if let image = object["secure_thumbnail"] as? String{
                             self.imageArray1.append(image)
+                        }
+                        if let id = object["id"] as? String{
+                            self.idArray1.append(id)
                         }
                     }
                     
@@ -81,33 +83,45 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("tableView numero de elementos")
+        //print("tableView numero de elementos")
         return nameArray1.count
     }
        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("cargando cada celda")
-
-        //let celda = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
-        let celda: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "identifierCell", for: indexPath)
+        
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "identifierCell", for: indexPath)
            
-        celda.textLabel?.text = nameArray1[indexPath.row]
+        cell.textLabel?.text = nameArray1[indexPath.row]
         
         if let img: String = imageArray1[indexPath.row], !img.isEmpty {
             Alamofire.request(img)
                 .responseImage { (response) in
                     if let image = response.result.value {
-                        celda.imageView?.image = image
+                        cell.imageView?.image = image
                     }
             }
         }
         
-        return celda
+        return cell
            // esta funcion lo que espera de return es una celda. una celda que vaya a mostrar
-           
-           //celda.imageView!.image = UIImage(named:"Libro.jpg")
     }
-     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        var idSelected = indexPath.row
+        self.performSegue(withIdentifier: "segue2", sender: idSelected)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue2"{
+            let numeroPantalla3: ViewController3 = segue.destination as! ViewController3
+                numeroPantalla3.valorRecibido2 = valorRecibido!
+            let idPantalla3: ViewController3 = segue.destination as! ViewController3
+                idPantalla3.idName = idArray1
+                
+        }
+    }
        
 }
 

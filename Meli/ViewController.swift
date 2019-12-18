@@ -34,18 +34,15 @@ class ViewController: UIViewController {
     @IBAction func buttonContinuar(_ sender: Any) {
         
         numero = textField.text!
-
       
 }
     override func prepare(for segue: UIStoryboardSegue,sender: Any?){
         
         if segue.identifier == "segue1"{
         
+            let numeroPantalla2: ViewController2 = segue.destination as! ViewController2
         
-        let numeroPantalla2: ViewController2 = segue.destination as! ViewController2
-        
-        numeroPantalla2.valorRecibido = numero
-    }
-     
+            numeroPantalla2.valorRecibido = numero
+        }
     }
 }
