@@ -123,11 +123,38 @@
                     <connections>
                         <outlet property="banksView" destination="veF-06-fTk" id="NwH-Ue-719"/>
                         <outlet property="moneyIn2" destination="DLf-l9-oSc" id="dYD-GX-I5i"/>
+                        <segue destination="rnp-eb-a5b" kind="show" identifier="segue3" id="3Dy-6T-dPl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSQ-Qf-Ysn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2753" y="108"/>
+        </scene>
+        <!--View Controller4-->
+        <scene sceneID="etf-Tb-NJc">
+            <objects>
+                <viewController id="rnp-eb-a5b" customClass="ViewController4" customModule="Meli" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OW1-Q6-0PA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-j0-x3j">
+                                <rect key="frame" x="16" y="62" width="343" height="585"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LeH-cj-F4X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qs0-SV-dvc"/>
+                    <connections>
+                        <outlet property="quotaView" destination="Qnl-j0-x3j" id="As1-Qr-PsV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FU1-ZA-bSl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3608.8000000000002" y="107.49625187406298"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GdS-to-Bhj">

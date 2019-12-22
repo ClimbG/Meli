@@ -96,8 +96,10 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
         if let img: String = imageArray1[indexPath.row], !img.isEmpty {
             Alamofire.request(img)
                 .responseImage { (response) in
-                    if let image = response.result.value {
-                        cell.imageView?.image = image
+                    if let image: UIImage = response.result.value {
+                        let size = CGSize(width: 30.0, height: 20.0)
+                        let scaledImage = image.af_imageScaled(to: size)
+                        cell.imageView?.image = scaledImage
                     }
             }
         }
@@ -108,18 +110,19 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        var idSelected = indexPath.row
+        let idSelected: String = self.idArray1[indexPath.row]
+
         self.performSegue(withIdentifier: "segue2", sender: idSelected)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue2"{
-            let numeroPantalla3: ViewController3 = segue.destination as! ViewController3
-                numeroPantalla3.valorRecibido2 = valorRecibido!
-            let idPantalla3: ViewController3 = segue.destination as! ViewController3
-                idPantalla3.idName = idArray1
+            let viewController3: ViewController3 = segue.destination as! ViewController3
                 
+            
+            viewController3.valorRecibido2 = self.valorRecibido!
+            viewController3.idName = sender as? String
         }
     }
        

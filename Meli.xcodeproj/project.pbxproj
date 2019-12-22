@@ -18,6 +18,7 @@
 		7BE64EF523A7DF240062C2F9 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE64EF423A7DF240062C2F9 /* ViewController3.swift */; };
 		FB1772CB239CB217004A3E0C /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1772CA239CB217004A3E0C /* CellView.xib */; };
 		FB1772CF239CB266004A3E0C /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1772CE239CB266004A3E0C /* CellView.swift */; };
+		FB5B80B423AFCF5300E272A7 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B80B323AFCF5300E272A7 /* ViewController4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7BE64EF423A7DF240062C2F9 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		FB1772CA239CB217004A3E0C /* CellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 		FB1772CE239CB266004A3E0C /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		FB5B80B323AFCF5300E272A7 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				7B1C37CB238ACA9400B8F69B /* ViewController.swift */,
 				7B2037AA238C4A97009FAFE7 /* ViewController2.swift */,
 				7BE64EF423A7DF240062C2F9 /* ViewController3.swift */,
+				FB5B80B323AFCF5300E272A7 /* ViewController4.swift */,
 				7B1C37CD238ACA9400B8F69B /* Main.storyboard */,
 				7B1C37D2238ACA9600B8F69B /* LaunchScreen.storyboard */,
 				7B1C37D5238ACA9600B8F69B /* Info.plist */,
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B1C37CC238ACA9400B8F69B /* ViewController.swift in Sources */,
+				FB5B80B423AFCF5300E272A7 /* ViewController4.swift in Sources */,
 				FB1772CF239CB266004A3E0C /* CellView.swift in Sources */,
 				7BE64EF523A7DF240062C2F9 /* ViewController3.swift in Sources */,
 				7B2037AB238C4A97009FAFE7 /* ViewController2.swift in Sources */,
