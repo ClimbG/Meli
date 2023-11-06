@@ -2,7 +2,7 @@
 //  ViewController4.swift
 //  Meli
 //
-//  Created by ALEXIS RIVAS FERNANDEZ on 22/12/2019.
+
 //  Copyright © 2019 Gilmer Marcano. All rights reserved.
 //
 
